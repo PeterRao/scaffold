@@ -1,3 +1,7 @@
 @import "../helpers/variables";
 @import "compass/utilities";
 @import "../vendors/normalize";
+
+body {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

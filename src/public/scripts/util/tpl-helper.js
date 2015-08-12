@@ -1,4 +1,4 @@
-define(['handlebars'], function(Handlebars) {
+define(['handlebars', '../config/url'], function(Handlebars, url) {
     var helper = {
         discount: function () {
             Handlebars.registerHelper('discount', function() {
@@ -11,6 +11,11 @@ define(['handlebars'], function(Handlebars) {
         imgSize: function (name, width, height, property) {
             Handlebars.registerHelper('img', function(){
                 return this[property].replace(/(\.png|\.jpg|\.jpeg)/i, '_' + width + 'x' + height + '$1');
+            });
+        },
+        staticPath: function () {
+            Handlebars.registerHelper('staticPath', function () {
+                return url.imgPrefix;
             });
         }
     };
