@@ -12,11 +12,11 @@ var argv = minimist(process.argv.slice(2));
 var watch = argv.watch;
 
 
-gulp.task('clean-build', del.bind(
+gulp.task('clean:build', del.bind(
     null, ['build'], {dot: true}
 ));
 
-gulp.task('clean-publish', del.bind(
+gulp.task('clean:publish', del.bind(
     null, ['publish'], {dot: true}
 ));
 
@@ -109,13 +109,21 @@ gulp.task('rev-all', function () {
         .pipe(gulp.dest('publish'));
 });
 
-gulp.task('default', function () {
-    runSequence(['lint', 'sass', 'html', 'scripts', 'templates'], 'css', function () {
-        if (watch) {
-            runSequence('watch', 'serve');
-        } else if (argv.release) {
-            runSequence('clean-publish','rev-all');
-        }
-    });
+gulp.task('build', ['lint', 'sass', 'html', 'scripts', 'templates'], function (cb) {
+    runSequence('css', cb);
+});
+
+gulp.task('default', function (cb) {
+    if (argv.release) {
+        runSequence(['clean:publish', 'clean:build'], 'build', function () {
+            runSequence('rev-all', cb);
+        });
+    } else if (watch) {
+        runSequence('build', function () {
+                runSequence('watch', 'serve', cb);
+        });
+    } else {
+        runSequence('build', cb);
+    }
 });
 
