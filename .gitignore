@@ -4,3 +4,4 @@ build/
 publish/
 src/public/css/
 src/public/.sass-cache/
+task/user-conf.js

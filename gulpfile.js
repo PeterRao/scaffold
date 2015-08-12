@@ -9,7 +9,7 @@ var config = require('./task/config'),
     browserSync = require('browser-sync').create();
 
 var argv = minimist(process.argv.slice(2));
-var watch = !argv.watch;
+var watch = argv.watch;
 
 
 gulp.task('clean-build', del.bind(
