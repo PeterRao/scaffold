@@ -1,0 +1,17 @@
+extends ../../helper/base
+
+block head-content
+    title Loading...
+    link(rel="stylesheet", href="/public/css/mobile/month.css")
+
+block body-content
+    header 我是title
+    section 我是content
+    footer 我是footer
+
+block am-analytics
+    script(type='text/javascript').
+        window._am_analytics_baidu_id = '7794a2b94a5f47f4335ed24cc4ebb1a7';
+
+block body-script
+    script(data-main="/public/scripts/entry/mobile/main" src="/public/scripts/lib/require.js")

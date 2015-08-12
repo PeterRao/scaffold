@@ -48,17 +48,20 @@ gulp.task('css', function () {
             .pipe(gulp.dest(config.css.dest));
     }
 });
-gulp.task('html', function () {
+gulp.task('jade', function () {
     var opts = {
         removeComments: true,
         collapseWhitespace: true,
         minifyJS: true,
         minifyCSS: true
     };
-    return gulp.src(config.html.src)
-        .pipe($.changed(config.html.dest))
+    return gulp.src(config.jade.src)
+        .pipe($.changed(config.jade.dest))
+        .pipe($.jade({
+            pretty: true
+        }))
         .pipe($.if(!watch, $.htmlmin(opts)))
-        .pipe(gulp.dest(config.html.dest));
+        .pipe(gulp.dest(config.jade.dest));
 });
 gulp.task('lint', function () {
     return gulp.src('src/public/scripts/!(lib)/**/*.js')
@@ -84,7 +87,7 @@ gulp.task('scripts', function () {
 
 gulp.task('watch', function () {
     gulp.watch(config.sass.src, ['sass']);
-    gulp.watch(config.html.src, ['html']);
+    gulp.watch(config.jade.src, ['jade']);
     gulp.watch(config.css.src, ['css']);
     gulp.watch(config.scripts.src, ['scripts']);
     gulp.watch(config.templates.src, ['templates']);
@@ -109,7 +112,7 @@ gulp.task('rev-all', function () {
         .pipe(gulp.dest('publish'));
 });
 
-gulp.task('build', ['lint', 'sass', 'html', 'scripts', 'templates'], function (cb) {
+gulp.task('build', ['lint', 'sass', 'jade', 'scripts', 'templates'], function (cb) {
     runSequence('css', cb);
 });
 

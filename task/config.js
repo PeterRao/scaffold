@@ -1,6 +1,6 @@
 var config = {
-    html: {
-        src: 'src/views/pages/**/*.html',
+    jade: {
+        src: 'src/views/jade/pages/**/*.jade',
         dest: 'build/pages'
     },
     sass: {

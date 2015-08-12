@@ -1,0 +1,33 @@
+//- 加入的模块说明：
+//-   block head-content    <HEAD> 内容
+//-   block body-content    <BODY> 内容
+//-   block body-content    <BODY> 内容
+//-   block am-analytics   设置百度统计
+doctype html
+html
+    head
+        meta(charset="utf-8")
+        //- 启用360浏览器的极速模式(webkit)
+        meta(name="renderer" content="webkit")
+        //- 优先使用IE最新版本和Chrome
+        meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+        meta(name="apple-mobile-web-app-capable",content="yes")
+        meta(name="apple-mobile-web-app-status-bar-style",content="grey")
+        meata(name="format-detection" content="telephone=no")
+        link(href="/favicon.ico", rel="icon", type="image/x-icon")
+        link(rel="stylesheet", href="/public/css/common.css")
+        script(src="/public/scripts/lib/flexible.js")
+        block head-content
+
+    body(ontouchstart="")
+        block body-content
+        block body-script
+        block am-analytics
+        script(type='text/javascript').
+            var _hmt = _hmt || [];
+            (function () {
+                var hm = document.createElement("script");
+                hm.src = "//hm.baidu.com/hm.js?" + window._am_analytics_baidu_id;
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
