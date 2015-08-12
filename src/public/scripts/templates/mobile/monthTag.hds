@@ -1,0 +1,6 @@
+{{#each this}}
+<div class="swiper-slide j-month-tag" data-idx="{{@index}}" data-tit="{{text_content}}">
+    <img src="{{tagImg}}" alt="{{text_content}}">
+    <p>{{text_content}}</p>
+</div>
+{{/each}}

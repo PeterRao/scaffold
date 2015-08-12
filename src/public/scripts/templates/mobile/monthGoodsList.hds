@@ -1,0 +1,96 @@
+<li class="clear panel" id="panel0">
+    <ul class="clear stock-wall">
+        {{#each stockList1}}
+        <li class="stock" data-id="{{id}}">
+            <img class="lazy" data-original="{{img}}" src="../images/stockbg.png" alt="{{name}}">
+            <div>
+                <h2>{{name}}</h2>
+                <span class="tag">{{discount}}折</span>
+                <footer>
+                    <del>&yen;{{original_price}}</del><span>&yen;{{priceout}}</span><button class="btn-primary btn">立即购买</button>
+                </footer>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</li>
+<li class="clear panel hide" id="panel1">
+    <ul class="clear stock-wall">
+        {{#each stockList2}}
+        <li class="stock" data-id="{{id}}">
+            <img class="lazy" data-original="{{img}}" src="../images/stockbg.png" alt="{{name}}">
+            <div>
+                <h2>{{name}}</h2>
+                <span class="tag">{{discount}}折</span>
+                <footer>
+                    <del>&yen;{{original_price}}</del><span>&yen;{{priceout}}</span><button class="btn-primary btn">立即购买</button>
+                </footer>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</li>
+<li class="clear panel hide" id="panel2">
+    <ul class="clear stock-wall">
+        {{#each stockList3}}
+        <li class="stock" data-id="{{id}}">
+            <img class="lazy" data-original="{{img}}" src="../images/stockbg.png" alt="{{name}}">
+            <div>
+                <h2>{{name}}</h2>
+                <span class="tag">{{discount}}折</span>
+                <footer>
+                    <del>&yen;{{original_price}}</del><span>&yen;{{priceout}}</span><button class="btn-primary btn">立即购买</button>
+                </footer>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</li>
+<li class="clear panel hide" id="panel3">
+    <ul class="clear stock-wall">
+        {{#each stockList4}}
+        <li class="stock" data-id="{{id}}">
+            <img class="lazy" data-original="{{img}}" src="../images/stockbg.png" alt="{{name}}">
+            <div>
+                <h2>{{name}}</h2>
+                <span class="tag">{{discount}}折</span>
+                <footer>
+                    <del>&yen;{{original_price}}</del><span>&yen;{{priceout}}</span><button class="btn-primary btn">立即购买</button>
+                </footer>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</li>
+<li class="clear panel hide" id="panel4">
+    <ul class="clear stock-wall">
+        {{#each stockList5}}
+        <li class="stock" data-id="{{id}}">
+            <img class="lazy" data-original="{{img}}" src="../images/stockbg.png" alt="{{name}}">
+            <div>
+                <h2>{{name}}</h2>
+                <span class="tag">{{discount}}折</span>
+                <footer>
+                    <del>&yen;{{original_price}}</del><span>&yen;{{priceout}}</span><button class="btn-primary btn">立即购买</button>
+                </footer>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</li>
+<li class="clear panel hide" id="panel5">
+    <ul class="clear stock-wall">
+        {{#each stockList6}}
+        <li class="stock" data-id="{{id}}">
+            <img class="lazy" data-original="{{img}}" src="../images/stockbg.png" alt="{{name}}">
+            <div>
+                <h2>{{name}}</h2>
+                <span class="tag">{{discount}}折</span>
+                <footer>
+                    <del>&yen;{{original_price}}</del><span>&yen;{{priceout}}</span><button class="btn-primary btn">立即购买</button>
+                </footer>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</li>

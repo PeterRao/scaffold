@@ -1,0 +1,7 @@
+http_path = '/'
+project_path = 'src/public'
+css_dir = 'css'
+sass_dir = 'sass'
+scss_dir = 'sass'
+fonts_dir = 'fonts'
+images_dir = 'images'
