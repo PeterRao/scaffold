@@ -8,8 +8,8 @@ body {
 }
 
 .container {
-    background: $body-bg url('../../../../images/promotions/824/pre-bg.jpg');
-    background-size: 100%;
+    background: url('../../../../images/promotions/824/pre-bg.jpg') no-repeat;
+    background-size: 100% auto;
     overflow: auto;
     @media (min-width: $screen-desktop) {
         @include px2rem('max-width', 750);

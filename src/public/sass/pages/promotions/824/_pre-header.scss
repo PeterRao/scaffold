@@ -1,0 +1,6 @@
+.pre {
+    header {
+        position: relative;
+        @include px2rem(height, 643)
+    }
+}
