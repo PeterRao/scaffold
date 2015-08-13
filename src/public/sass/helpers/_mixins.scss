@@ -1,6 +1,7 @@
+@import "functions";
 // http://www.html-js.com/article/Mobile-terminal-H5-mobile-terminal-HD-multi-screen-adaptation-scheme%203041
 @mixin px2rem($name, $px) {
-    #{$name}: $px / 75 * 1rem;
+    #{$name}: px2rem($px);
 }
 
 // 供字体使用
