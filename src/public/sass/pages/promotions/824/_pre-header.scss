@@ -1,23 +1,37 @@
 .pre {
+    .bg {
+        width: 100%;
+        display: block;
+    }
     header {
         position: relative;
-        .bg {
-            width: 100%;
-            display: block;
-        }
+        @include px2rem(height, 124);
         .count-down {
-            &-title {
-                position: absolute;
+            position: absolute;
+            @include px2rem(left, 76);
+            .module {
+                float: left;
                 color: #fff;
-                @include px2px(font-size, 25);
-                @include px2rem(top, 375);
-                @include px2rem(left, 76);
+                text-align: center;
             }
-            &-content {
-                position: absolute;
-                color: #fff;
-                @include px2rem(top, 409);
-                @include px2rem(left, 76);
+            span {
+                &.number {
+                    color: #4e4e4e;
+                    @include px2px(font-size, 52);
+                    margin: 0 px2rem(3);
+                    padding: 0 px2rem(4);
+                    background-color: #fff;
+                    @include border-radius(px2rem(3));
+                }
+                &.sign {
+                    display: inline-block;
+                    padding: px2rem(12) 0;
+                }
+                &.unit {
+                    display: inline-block;
+                    @include px2rem(margin-top, 8);
+                    @include px2px(font-size, 22);
+                }
             }
         }
     }
