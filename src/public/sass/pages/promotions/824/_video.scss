@@ -24,7 +24,6 @@
     .video-i {
         margin-bottom: px2rem(20);
         @include px2rem(width, 226);
-        @include px2rem(height, 294);
         border: 1px solid #ffcc00;
         background-color: #ffba00;
     }
@@ -35,7 +34,8 @@
         text-align: center;
         video {
             margin: 0 auto;
-            @include px2rem(height, 165);
+            width: 100%;
+            //@include px2rem(height, 165);
         }
     }
 
@@ -52,18 +52,18 @@
 
     .video-info {
         display: table;
+        table-layout: fixed;
         width: 100%;
-        @include px2rem(height, 94);
-        text-align: center;
+        padding: px2rem(5) 0;
+        @include px2rem(height, 80);
 
         .owner-avatar, .owner-info {
             display: table-cell;
             vertical-align: middle;
-            table-layout: fixed;
         }
 
         .owner-avatar {
-            padding: 0 px2rem(5);
+            padding-left: px2rem(5);
             text-align: left;
             img {
                 background-color: #fff;
@@ -77,6 +77,7 @@
         .owner-info {
             @include px2rem(width, 135);
             color: #fff;
+            text-align: center;
             @include px2px(font-size, 25);
 
             p {
