@@ -56,6 +56,7 @@ gulp.task('jade', function () {
         minifyCSS: true
     };
     return gulp.src(config.jade.src)
+        .pipe($.plumber())
         .pipe($.changed(config.jade.dest))
         .pipe($.jade({
             pretty: true
@@ -71,6 +72,7 @@ gulp.task('lint', function () {
 
 gulp.task('templates', function () {
     return gulp.src(config.templates.src)
+        .pipe($.plumber())
         .pipe($.changed(config.scripts.dest))
         .pipe($.handlebars())
         .pipe($.defineModule('amd'))
@@ -83,6 +85,12 @@ gulp.task('scripts', function () {
         .pipe($.changed(config.scripts.dest))
         .pipe($.if(!watch, $.uglify()))
         .pipe(gulp.dest(config.scripts.dest));
+});
+
+gulp.task('images', function () {
+    return gulp.src(config.images.src)
+        .pipe($.changed(config.images.dest))
+        .pipe(gulp.dest(config.images.dest));
 });
 
 gulp.task('watch', function () {

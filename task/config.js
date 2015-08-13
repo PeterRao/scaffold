@@ -10,6 +10,10 @@ var config = {
         src: 'src/public/css/**/*.css',
         dest: 'build/public/css'
     },
+    images: {
+        src: 'src/public/images/**',
+        dest: 'build/public/images'
+    },
     templates: {
         src: 'src/public/scripts/templates/**/*.hds',
         dest: 'build/public/scripts/templates'
