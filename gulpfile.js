@@ -96,7 +96,7 @@ gulp.task('images', function () {
 
 gulp.task('watch', function () {
     gulp.watch(config.sass.src, ['sass']);
-    gulp.watch(config.jade.src, ['jade']);
+    gulp.watch(config.jade.watch, ['jade']);
     gulp.watch(config.css.src, ['css']);
     gulp.watch(config.scripts.src, ['scripts']);
     gulp.watch(config.templates.src, ['templates']);
