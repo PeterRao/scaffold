@@ -1,6 +1,24 @@
 .pre {
     header {
         position: relative;
-        @include px2rem(height, 643)
+        .bg {
+            width: 100%;
+            display: block;
+        }
+        .count-down {
+            &-title {
+                position: absolute;
+                color: #fff;
+                @include px2px(font-size, 25);
+                @include px2rem(top, 375);
+                @include px2rem(left, 76);
+            }
+            &-content {
+                position: absolute;
+                color: #fff;
+                @include px2rem(top, 409);
+                @include px2rem(left, 76);
+            }
+        }
     }
 }

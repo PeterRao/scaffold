@@ -91,12 +91,14 @@ gulp.task('scripts', function () {
 gulp.task('images', function () {
     return gulp.src(config.images.src)
         .pipe($.changed(config.images.dest))
+        //.pipe($.imagemin())
         .pipe(gulp.dest(config.images.dest));
 });
 
 gulp.task('watch', function () {
     gulp.watch(config.sass.src, ['sass']);
     gulp.watch(config.jade.watch, ['jade']);
+    gulp.watch(config.images.src, ['images']);
     gulp.watch(config.css.src, ['css']);
     gulp.watch(config.scripts.src, ['scripts']);
     gulp.watch(config.templates.src, ['templates']);

@@ -11,11 +11,14 @@ body {
 }
 
 .container {
-    background: url('../../../../images/promotions/824/pre-bg.jpg') no-repeat;
-    @include background-size();
     overflow: auto;
     @media (min-width: $screen-desktop) {
         @include px2rem('max-width', 750);
         margin: 0 auto;
     }
+}
+.bg-content {
+    overflow: auto;
+    background: #ff7683 url('../../../../images/promotions/824/pre-bg2.jpg') no-repeat;
+    @include background-size();
 }
