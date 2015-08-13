@@ -1,3 +1,4 @@
+@import "compass";
 @import "../../../helpers/mixins";
 @import "../../../helpers/variables";
 
@@ -10,7 +11,7 @@ body {
 
 .container {
     background: url('../../../../images/promotions/824/pre-bg.jpg') no-repeat;
-    background-size: 100% auto;
+    @include background-size();
     overflow: auto;
     @media (min-width: $screen-desktop) {
         @include px2rem('max-width', 750);
