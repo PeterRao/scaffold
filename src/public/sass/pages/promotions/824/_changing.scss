@@ -1,5 +1,59 @@
-@import "../../../helpers/mixins";
-
+/* changing module style */
 .changing {
+    background-color: #e1d8f0;
+    @include border-radius(px2rem(8));
 
+    .changing-t {
+        padding: px2rem(32) 0 px2rem(44);
+        text-align: center;
+        img {
+            @include px2rem(width, 583);
+            vertical-align: top;
+        }
+    }
+
+    $pub-lr-sp: px2rem(25);
+    
+    .changing-ls {
+        margin: 0;
+        padding: 0 $pub-lr-sp;
+        list-style: none;
+        .changing-item {
+            background-color: #fff;
+            @include border-radius(px2rem(5));
+            overflow: hidden;
+            text-align: center;
+            img {
+                @include px2rem(width, 664);
+                vertical-align: top;
+            }
+            &:not(:last-child) {
+                margin-bottom: px2rem(15);
+            }
+        }
+    }
+
+    $rule-color: #756590;
+    
+    .changing-rule {
+        display: inline-block;
+        margin: px2rem(50) $pub-lr-sp 0;
+        padding: px2rem(6) px2rem(12);
+        @include border-radius(px2rem(3));
+        background-color: #c3acea;
+        color: $rule-color;
+        @include px2px(font-size, 30);
+    }
+
+    .changing-rule-ls {
+        margin: 0 $pub-lr-sp;
+        padding: px2rem(10) 0 px2rem(45);
+        color: $rule-color;
+        @include px2px(font-size, 25);
+        line-height: 1.6;
+        list-style: outside decimal;
+        li {
+            margin-left: px2rem(45);
+        }
+    }
 }
