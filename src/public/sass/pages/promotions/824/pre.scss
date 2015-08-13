@@ -8,6 +8,7 @@ $imgPath: '../../../../images/promotions/824/';
 @import "pre-header";
 @import "changing";
 @import "video";
+@import "goods";
 
 
 body {
@@ -35,4 +36,8 @@ $h-space: px2rem(20);
 
 .m-video {
     margin: 0 $h-space px2rem(58);
+}
+
+.m-goods {
+    margin: 0 $h-space px2rem(50);
 }

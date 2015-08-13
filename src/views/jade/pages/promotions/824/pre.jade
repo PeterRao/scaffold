@@ -1,7 +1,7 @@
 extends ../../../helper/base
 
 block head-content
-    title Loading...
+    title 淘世界周年庆 - 全球狠货抢先看, 1折起
     - var cssPath = "/public/css/pages/promotions/824/"
     link(rel="stylesheet", href= cssPath + "pre.css")
 
@@ -23,7 +23,8 @@ block body-content
                 include ../../../partial/promotions/824/changing
             section.m-video
                 include ../../../partial/promotions/824/video
-            section
+            section.m-goods
+                include ../../../partial/promotions/824/goods
 
 
 
