@@ -58,7 +58,7 @@ gulp.task('jade', function () {
     };
     return gulp.src(config.jade.src)
         .pipe($.plumber())
-        .pipe($.changed(config.jade.dest))
+        .pipe($.changed(config.jade.dest, {hasChanged: $.changed.compareSha1Digest}))
         .pipe($.jade({
             pretty: true
         }))
