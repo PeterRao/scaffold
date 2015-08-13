@@ -5,6 +5,7 @@
 
 @import "pre-header";
 @import "changing";
+@import "video";
 
 body {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -21,4 +22,14 @@ body {
     overflow: auto;
     background: #ff7683 url('../../../../images/promotions/824/pre-bg2.jpg') no-repeat;
     @include background-size();
+}
+
+$h-space: px2rem(20);
+
+.m-changing {
+    margin: 0 $h-space px2rem(54);
+}
+
+.m-video {
+    margin: 0 $h-space px2rem(58);
 }

@@ -1,0 +1,12 @@
+/* video module style */
+.video {
+    background-color: transparent;
+
+    .video-t {
+        text-align: center;
+        img {
+            @include px2rem(width, 348);
+            vertical-align: top;
+        }
+    }
+}
