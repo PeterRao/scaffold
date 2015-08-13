@@ -1,3 +1,16 @@
 .video
     .video-t
         img(src = imgPath + 'video-t.png', alt='世界买手为你淘')
+    ul#j-video-ls.video-ls
+        - for(var i = 0; i < 6; i++)
+            li.video-i
+                .video-play
+                    video(controls='controls', src='http://mvvideo1.meitudata.com/55b84a26097e19720.mp4')
+                .video-ft
+                    .video-name 颜值最高
+                    .video-info
+                        .owner-avatar
+                            img(src='http://placehold.it/90')
+                        .owner-info
+                            p 美国
+                            p 昵称
