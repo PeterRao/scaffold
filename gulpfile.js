@@ -120,7 +120,7 @@ gulp.task('rev-all', function () {
         .pipe(gulp.dest('publish'));
 });
 
-gulp.task('build', ['lint', 'sass', 'jade', 'scripts', 'templates'], function (cb) {
+gulp.task('build', ['lint', 'sass', 'jade', 'scripts', 'templates', 'images'], function (cb) {
     runSequence('css', cb);
 });
 
