@@ -1,0 +1,24 @@
+extends ../../../helper/base
+
+block head-content
+    title Loading...
+    link(rel="stylesheet", href="/public/css/mobile/month.css")
+
+block body-script
+    script(data-main="/public/scripts/entry/mobile/main" src="/public/scripts/lib/require.js")
+
+block am-analytics
+    script(type='text/javascript').
+        window._am_analytics_baidu_id = '7794a2b94a5f47f4335ed24cc4ebb1a7';
+
+block body-content
+    .container
+        header
+            include ../../../partial/promotions/824/header
+        section
+            include ../../../
+        section
+        section
+
+
+
