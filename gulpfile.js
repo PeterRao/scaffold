@@ -22,6 +22,7 @@ gulp.task('clean:publish', del.bind(
 
 gulp.task('sass', function () {
     return gulp.src('./src/public/sass/**/*.scss')
+        .pipe($.plumber())
         .pipe($.compass({
             project: __dirname + '/src/public',
             //debug: true,
@@ -38,11 +39,11 @@ gulp.task('sass', function () {
 });
 gulp.task('css', function () {
     if (watch) {
-        return gulp.src('src/public/css/pages/**')
+        return gulp.src('src/public/css/**')
             .pipe($.changed(config.css.dest))
             .pipe(gulp.dest(config.css.dest));
     } else {
-        return gulp.src('src/public/css/pages/**/*.css')
+        return gulp.src('src/public/css/**/*.css')
             .pipe($.changed(config.css.dest))
             .pipe($.minifyCss())
             .pipe(gulp.dest(config.css.dest));
