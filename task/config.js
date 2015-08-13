@@ -2,7 +2,7 @@ var config = {
     jade: {
         src: 'src/views/jade/pages/**/*.jade',
         dest: 'build/pages',
-        watch: 'src/view/jade/**/*.jade'
+        watch: 'src/views/jade/**/*.jade'
     },
     sass: {
         src: 'src/public/sass/**/*.scss'
