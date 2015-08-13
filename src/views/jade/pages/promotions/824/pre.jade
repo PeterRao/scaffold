@@ -1,8 +1,9 @@
 extends ../../../helper/base
 
 block head-content
+    - var publicPath = "/public/css/pages/promotions/824"
     title Loading...
-    link(rel="stylesheet", href="/public/css/pages/promotions/824/pre.css")
+    link(rel="stylesheet", href= test + publicPath + "/pre.css")
 
 block body-script
     script(data-main="/public/scripts/entry/mobile/main" src="/public/scripts/lib/require.js")
@@ -13,6 +14,8 @@ block am-analytics
 
 block body-content
     .container.pre
+        - var cssPath = "/public/css/pages/promotions/824"
+        - var imgPath = "/public/images/pages/promotions/824"
         header
             include ../../../partial/promotions/824/header
         section.m-changing

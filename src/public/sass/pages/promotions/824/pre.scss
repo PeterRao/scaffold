@@ -9,6 +9,7 @@ body {
 
 .container {
     background: $body-bg url('../../../../images/promotions/824/pre-bg.jpg');
+    background-size: 100%;
     overflow: auto;
     @media (min-width: $screen-desktop) {
         @include px2rem('max-width', 750);
