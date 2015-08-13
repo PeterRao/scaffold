@@ -4,7 +4,8 @@
     ul.changing-ls
         var n = 0
         while n < 4
-            li.changing-item= 'changin'
+            li.changing-item
+                img(src='/public/images/promotions/824/changing-i-' + n + '.jpg')
     .changing-rule 规&nbsp;&nbsp;则
     ul.changing-rule-ls
         each val in ['兑换日期8月24日—8月26日；','消费满一定金额可随机得到该额度兑换区任意好礼，(奖品有限先到先得)；', '消费金额累计以实付金额为准；', '所有消费金额可累计，累计满额后兑换次数叠加;']
