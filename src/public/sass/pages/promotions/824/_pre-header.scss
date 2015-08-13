@@ -5,7 +5,7 @@
     }
     header {
         position: relative;
-        @include px2rem(height, 124);
+        @include px2rem(height, 244);
         .count-down {
             position: absolute;
             @include px2rem(left, 76);
@@ -20,7 +20,8 @@
                     @include px2px(font-size, 52);
                     margin: 0 px2rem(3);
                     padding: 0 px2rem(4);
-                    background-color: #fff;
+                    @include background-image(linear-gradient(to bottom, #fff 0%, #fff 50%,
+                            #ececec 50%, #ececec 100%));
                     @include border-radius(px2rem(3));
                 }
                 &.sign {
@@ -32,6 +33,25 @@
                     @include px2rem(margin-top, 8);
                     @include px2px(font-size, 22);
                 }
+            }
+        }
+        .get-coupon {
+            position: absolute;
+            @include px2rem(width, 248);
+            @include px2rem(top, -20);
+            @include px2rem(right, 26);
+            img {
+                width: 100%;
+            }
+            z-index: 1;
+        }
+        .go-guides {
+            position: absolute;
+            @include px2rem(width, 607);
+            @include px2rem(bottom, 34);
+            @include px2rem(right, 26);
+            img {
+                width: 100%;
             }
         }
     }
