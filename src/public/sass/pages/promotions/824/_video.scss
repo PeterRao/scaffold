@@ -2,7 +2,7 @@
 .video {
     background-color: transparent;
 
-    .video-t {
+    .video-hd {
         margin-bottom: px2rem(35);
         text-align: center;
         img {
@@ -18,7 +18,7 @@
         @include display-flex(flex);
         @include flex-wrap(wrap);
         @include justify-content(space-between);
-        @include align-items(flex-start);
+        @include align-items(stretch);
     }
 
     .video-i {
@@ -35,7 +35,7 @@
         video {
             margin: 0 auto;
             width: 100%;
-            //@include px2rem(height, 165);
+            @include px2rem(height, 225);
         }
     }
 

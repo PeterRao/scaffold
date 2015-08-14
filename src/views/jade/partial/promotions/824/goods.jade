@@ -1,3 +1,14 @@
 .goods
-    .goods-t
+    .goods-hd
         img(src = imgPath + 'goods-t.png', alt='好货抢先看,提前加入购物车')
+    ul#j-goods-ls.goods-ls
+        - for(var i = 0; i < 4; i++)
+            li.goods-i
+                .lazy.goods-pic(style = 'background-image: url(http://placehold.it/400)', data-original = 'images/goods-def.png')
+                .goods-name LeSportsac 手提袋英国限量发售
+                .goods-price
+                    del 1152.44
+                .goods-discount 8.24价格
+                    em &yen;1152.44
+                img.goods-flag(src = imgPath + 'goods-flag.png')
+

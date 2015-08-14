@@ -17,7 +17,7 @@ body {
 
 .container {
     overflow: auto;
-    @media (min-width: $screen-desktop) {
+    @media (min-device-width: $screen-desktop) {
         @include px2rem('max-width', 750);
         margin: 0 auto;
     }

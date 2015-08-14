@@ -3,12 +3,30 @@
     background-color: #ffa3ab;
     @include border-radius(px2rem(8));
 
-    .goods-t {
+    .goods-hd {
         padding: px2rem(35) 0 px2rem(50);
         text-align: center;
         img {
             @include px2rem(width, 571);
             vertical-align: top;
         }
+    }
+
+    .goods-ls {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include justify-content(space-between);
+        @include align-items(stretch);
+    }
+
+    .goods-i {
+        margin-bottom: px2rem(20);
+        @include px2rem(width, 330);
+        @include box-sizing();
+        border: 1px solid #e4e4e4;
+        background-color: #fff;
     }
 }
