@@ -1,6 +1,7 @@
 var config = {
     browserSync: {
-       proxy: 'localhost:8003'
+        proxy: 'localhost:8003',
+        startPath: 'pages/promotions/824/pre.html'
     }
 };
 

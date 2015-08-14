@@ -1,20 +1,25 @@
 span.count-down
     .module
-        span.number 0
-        span.number 0
+        span.number#day1 &nbsp;&nbsp;
+        span.number#day2 &nbsp;&nbsp;
         br
         span.unit 天
     .module
         span.sign -
     .module
-        span.number 0
-        span.number 0
+        span#hour1.number &nbsp;&nbsp;
+        span#hour2.number &nbsp;&nbsp;
         br
         span.unit 小时
     .module
         span.sign :
     .module
-        span.number 0
-        span.number 0
+        span#minute1.number &nbsp;&nbsp;
+        span#minute2.number &nbsp;&nbsp;
         br
         span.unit 分钟
+
+a.get-coupon(href="javascript:void(0)")
+    img(src=imgPath + 'get-coupon.png')
+a.go-guides(href="javascript:void(0)")
+    img(src=imgPath + 'go2guides.png')

@@ -6,7 +6,7 @@ block head-content
     link(rel="stylesheet", href= cssPath + "pre.css")
 
 block body-script
-    script(data-main="/public/scripts/entry/mobile/main" src="/public/scripts/lib/require.js")
+    script(data-main="/public/scripts/entry/promotions/824/pre" src="/public/scripts/lib/require.js")
 
 block am-analytics
     script(type='text/javascript').
@@ -15,7 +15,7 @@ block am-analytics
 block body-content
     .container.pre
         - var imgPath = "/public/images/promotions/824/"
-        img.bg(src= imgPath + "/pre-bg1.jpg")
+        img.bg(src= imgPath + "pre-bg1.jpg")
         .bg-content
             header
                 include ../../../partial/promotions/824/header
