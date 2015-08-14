@@ -1,0 +1,14 @@
+/* goods list module style */
+.goods {
+    background-color: #ffa3ab;
+    @include border-radius(px2rem(8));
+
+    .goods-t {
+        padding: px2rem(35) 0 px2rem(50);
+        text-align: center;
+        img {
+            @include px2rem(width, 571);
+            vertical-align: top;
+        }
+    }
+}

@@ -3,9 +3,13 @@
 @import "../../../helpers/functions";
 @import "../../../helpers/variables";
 
+$imgPath: '../../../../images/promotions/824/';
+
 @import "pre-header";
 @import "changing";
 @import "video";
+@import "goods";
+
 
 body {
     -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -18,7 +22,8 @@ body {
     }
 }
 .bg-content {
-    background: #ff7683 url('../../../../images/promotions/824/pre-bg2.jpg') no-repeat;
+    overflow: auto;
+    background: #ff7683 url('#{$imgPath}pre-bg2.jpg') no-repeat;
     @include background-size();
 }
 
@@ -30,4 +35,8 @@ $h-space: px2rem(20);
 
 .m-video {
     margin: 0 $h-space px2rem(58);
+}
+
+.m-goods {
+    margin: 0 $h-space px2rem(50);
 }
