@@ -107,14 +107,29 @@ gulp.task('watch', function () {
 gulp.task('serve', function () {
     browserSync.init({
         proxy: userConf.browserSync.proxy,
-        files: ['build/**']
+        files: ['build/**'],
+        startPath: userConf.browserSync.startPath
     });
+});
+
+gulp.task('qiniu', function () {
+    return gulp.src(['publish/public/**', 'publish/public/*.json'])
+        .pipe($.qiniu({
+            accessKey: '3UuYUI-tETf8OpGAo2hW598MqYEKain-ZfemVL0J',
+            secretKey: 'vAP7NYF5FzfzEsdYgMVQMYFSzoR1Bqq6siA-4MXH',
+            bucket: 'test',
+            private: false
+        }, {
+            dir: 'public/',
+            versionFile: './cdn.json'
+        }));
 });
 
 gulp.task('rev-all', function () {
     var revAll = new $.revAll({
         dontRenameFile: [/^\/favicon.ico$/g, '.html'],
-        dontGlobal: ['require.js']
+        dontGlobal: ['require.js'],
+        prefix: 'https://dn-wiztest.qbox.me'
     });
     return gulp.src('build/**')
         .pipe(revAll.revision())
