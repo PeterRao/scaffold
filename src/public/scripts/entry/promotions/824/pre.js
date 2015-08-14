@@ -21,7 +21,7 @@ define([
         var MILL_SECONDS_PER_MINUTE = 1000 * 60,
             MILL_SECONDS_PER_HOUR = MILL_SECONDS_PER_MINUTE * 60,
             MILL_SECONDS_PER_DAY = MILL_SECONDS_PER_HOUR * 24,
-            END_TIME = new Date(2015, 8 - 1, 14);
+            END_TIME = new Date(2015, 8 - 1, 20);
 
         var _view = {
             init: function () {

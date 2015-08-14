@@ -22,7 +22,6 @@ body {
     }
 }
 .bg-content {
-    overflow: auto;
     background: #ff7683 url('#{$imgPath}pre-bg2.jpg') no-repeat;
     @include background-size();
 }
